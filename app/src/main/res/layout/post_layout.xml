@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingBottom="10dp"
+    android:layout_marginVertical="4dp"
+    android:background="@color/white"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/owner_img"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:src="@drawable/story"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:shapeAppearanceOverlay="@style/circleImageView"
+        android:scaleType="centerCrop"
+        app:layout_constraintVertical_bias="0"
+        app:layout_constraintHorizontal_bias="0"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="16dp"/>
+    <TextView
+        android:id="@+id/owener_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:fontFamily="sans-serif"
+        android:maxWidth="200dp"
+        android:text="Fahim Mohammod Fardous"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/owner_img"
+        app:layout_constraintTop_toTopOf="@+id/owner_img"
+        app:layout_constraintHorizontal_bias="0"/>
+    <TextView
+        android:id="@+id/post_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/owener_name"
+        app:layout_constraintStart_toStartOf="@id/owener_name"
+        app:layout_constraintEnd_toEndOf="@id/owener_name"
+        app:layout_constraintHorizontal_bias="0"
+        android:layout_marginTop="3dp"
+        android:fontFamily="sans-serif"
+        android:text="35m"
+        android:textStyle="bold"
+        android:textSize="12sp"/>
+
+    <TextView
+        android:id="@+id/post_caption"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="12dp"
+        android:text="Beat me if you can 😎"
+        android:fontFamily="sans-serif"
+        android:textStyle="normal"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="@+id/owener_name"
+        app:layout_constraintStart_toStartOf="@+id/owner_img"
+        app:layout_constraintTop_toBottomOf="@+id/post_time"
+        app:layout_constraintHorizontal_bias="0"/>
+
+    <ImageView
+        android:id="@+id/more_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/baseline_more_horiz_24"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.6"
+        app:layout_constraintStart_toEndOf="@+id/owener_name"
+        app:layout_constraintTop_toTopOf="@+id/owener_name" />
+    <ImageView
+        android:id="@+id/remove_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@id/owener_name"
+        app:layout_constraintTop_toTopOf="@id/owener_name"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:src="@drawable/baseline_close_24"
+        app:layout_constraintHorizontal_bias="1"
+        android:layout_marginEnd="16dp"/>
+
+    <ImageView
+        android:id="@+id/post_img"
+        android:layout_width="wrap_content"
+        android:layout_height="200dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/post_caption"
+        android:layout_marginTop="4dp"
+        android:src="@drawable/valorant"
+        android:scaleType="centerCrop"/>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/like_comment_share_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="3dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/post_img"
+        app:layout_constraintVertical_bias="0">
+
+        <ImageView
+            android:id="@+id/like_count"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="5dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/like_count"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0" />
+
+        <ImageView
+            android:id="@+id/love_count"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:src="@drawable/thumbs_up"
+            app:layout_constraintBottom_toBottomOf="@+id/like_count"
+            app:layout_constraintStart_toEndOf="@id/like_count"
+            app:layout_constraintTop_toTopOf="@id/like_count" />
+
+        <TextView
+            android:id="@+id/react_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="3dp"
+            android:text="140"
+
+            android:textSize="12sp"
+            app:layout_constraintStart_toEndOf="@id/love_count"
+            app:layout_constraintTop_toTopOf="@id/love_count" />
+
+        <TextView
+            android:id="@+id/comment_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="3 comments ."
+            app:layout_constraintEnd_toStartOf="@id/share_count"
+            app:layout_constraintHorizontal_bias="1"
+            app:layout_constraintStart_toEndOf="@+id/react_count"
+            app:layout_constraintTop_toTopOf="@id/react_count"
+            tools:layout_editor_absoluteY="5dp" />
+
+        <TextView
+            android:id="@+id/share_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:text="5 shares"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1"
+            app:layout_constraintStart_toEndOf="@id/react_count"
+            app:layout_constraintTop_toTopOf="@id/react_count" />
+
+        <com.google.android.material.divider.MaterialDivider
+            android:id="@+id/divider"
+            android:layout_width="0dp"
+            android:layout_height="2dp"
+            android:layout_marginTop="6dp"
+            app:layout_constraintEnd_toEndOf="@id/share_count"
+            app:layout_constraintStart_toStartOf="@id/like_count"
+            app:layout_constraintTop_toBottomOf="@id/like_count" />
+
+        <LinearLayout
+            android:id="@+id/button_layout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/divider">
+
+            <com.google.android.material.button.MaterialButtonToggleGroup
+                android:id="@+id/toggleButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginHorizontal="16dp">
+
+                <Button
+                    android:id="@+id/likeButton"
+                    style="?attr/borderlessButtonStyle"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:drawableLeft="@drawable/outline_thumb_up_24"
+                    android:text="Like"
+                    android:textColor="@color/black" />
+
+                <Button
+                    android:id="@+id/commentButton"
+                    style="?attr/borderlessButtonStyle"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:drawableLeft="@drawable/outline_mode_comment_24"
+                    android:text="Comment"
+                    android:textColor="@color/black" />
+
+                <Button
+                    android:id="@+id/shareButton"
+                    style="?attr/borderlessButtonStyle"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:drawableLeft="@drawable/outline_send_24"
+                    android:text="Share"
+                    android:textColor="@color/black" />
+            </com.google.android.material.button.MaterialButtonToggleGroup>
+
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
